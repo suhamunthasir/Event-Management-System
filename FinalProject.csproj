@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8DF8232-7440-4F49-9F59-368DC99DF52F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssignDriverLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignDriverLoader.Designer.cs">
+      <DependentUpon>AssignDriverLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checklist.Designer.cs">
+      <DependentUpon>Checklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmCalendar.Designer.cs">
+      <DependentUpon>EmCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEventAssistant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeEventAssistant.Designer.cs">
+      <DependentUpon>EmployeeEventAssistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEventPlanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeEventPlanner.Designer.cs">
+      <DependentUpon>EmployeeEventPlanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeLogisticManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeLogisticManager.Designer.cs">
+      <DependentUpon>EmployeeLogisticManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeePayment.Designer.cs">
+      <DependentUpon>EmployeePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EpProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EpProduct.Designer.cs">
+      <DependentUpon>EpProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event.Designer.cs">
+      <DependentUpon>Event.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventAssistantChecklistcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventAssistantChecklistcs.Designer.cs">
+      <DependentUpon>EventAssistantChecklistcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventHistory.Designer.cs">
+      <DependentUpon>EventHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventManager.Designer.cs">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventPlanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventPlanner.Designer.cs">
+      <DependentUpon>EventPlanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceManager.Designer.cs">
+      <DependentUpon>FinanceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmEventPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmEventPayment.Designer.cs">
+      <DependentUpon>FmEventPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmSupplierPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmSupplierPayment.Designer.cs">
+      <DependentUpon>FmSupplierPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralManager.Designer.cs">
+      <DependentUpon>GeneralManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GmCustomer.Designer.cs">
+      <DependentUpon>GmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GmEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GmEvent.Designer.cs">
+      <DependentUpon>GmEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GmSupplier.Designer.cs">
+      <DependentUpon>GmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GRN.Designer.cs">
+      <DependentUpon>GRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogisticManages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogisticManages.Designer.cs">
+      <DependentUpon>LogisticManages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meetings.Designer.cs">
+      <DependentUpon>Meetings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print.Designer.cs">
+      <DependentUpon>print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleDetails.Designer.cs">
+      <DependentUpon>VehicleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voucher.Designer.cs">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="warehouse.Designer.cs">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseLoaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseLoaders.Designer.cs">
+      <DependentUpon>WarehouseLoaders.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AssignDriverLoader.resx">
+      <DependentUpon>AssignDriverLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checklist.resx">
+      <DependentUpon>Checklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmCalendar.resx">
+      <DependentUpon>EmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeEventAssistant.resx">
+      <DependentUpon>EmployeeEventAssistant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeEventPlanner.resx">
+      <DependentUpon>EmployeeEventPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeLogisticManager.resx">
+      <DependentUpon>EmployeeLogisticManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeePayment.resx">
+      <DependentUpon>EmployeePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EpProduct.resx">
+      <DependentUpon>EpProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event.resx">
+      <DependentUpon>Event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventAssistantChecklistcs.resx">
+      <DependentUpon>EventAssistantChecklistcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventHistory.resx">
+      <DependentUpon>EventHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventManager.resx">
+      <DependentUpon>EventManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventPlanner.resx">
+      <DependentUpon>EventPlanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceManager.resx">
+      <DependentUpon>FinanceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmEventPayment.resx">
+      <DependentUpon>FmEventPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmSupplierPayment.resx">
+      <DependentUpon>FmSupplierPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralManager.resx">
+      <DependentUpon>GeneralManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GmCustomer.resx">
+      <DependentUpon>GmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GmEvent.resx">
+      <DependentUpon>GmEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GmSupplier.resx">
+      <DependentUpon>GmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GRN.resx">
+      <DependentUpon>GRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogisticManages.resx">
+      <DependentUpon>LogisticManages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meetings.resx">
+      <DependentUpon>Meetings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print.resx">
+      <DependentUpon>print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleDetails.resx">
+      <DependentUpon>VehicleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voucher.resx">
+      <DependentUpon>Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="warehouse.resx">
+      <DependentUpon>warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseLoaders.resx">
+      <DependentUpon>WarehouseLoaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
